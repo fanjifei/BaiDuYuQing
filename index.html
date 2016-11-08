@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>百度舆情</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script>
+$(function(){
+	$(document).on('click', '#next', function(){ $.fn.fullpage.moveSectionDown()})
+	$('#dowebok').fullpage({
+		navigation:true,
+		afterLoad: function(anchorLink, index){
+			if (index==1) {
+				$('.section').find('.ship').addClass('shipmove')
+			};
+			if(index == 2){
+				$('.section2').find('.left').css({display:'block'});
+				$('.section2').find('.right').css({display:'block'});
+				$('.section2').find('.left').addClass('moveleft')
+				$('.section2').find('.right').addClass('moveright')
+			}
+			if(index == 3){
+				$('.section3').find('.left').css({display:'block'});
+				$('.section3').find('.right').css({display:'block'});
+				$('.section3').find('.left').addClass('moveleft')
+				$('.section3').find('.right').addClass('moveright')
+			}
+
+			if(index == 4){
+				$('.section4').find('.left').css({display:'block'});
+				$('.section4').find('.right').css({display:'block'});
+				$('.section4').find('.left').addClass('moveleft')
+				$('.section4').find('.right').addClass('moveright')
+			}
+		},
+		onLeave: function(index, direction){
+			if (index=='1') {
+				$('.section').find('.ship').removeClass('shipmove')
+				$('.section').find('.ship').animate({
+					left: '260px'
+				},0, 'easeOutExpo');
+			};
+			if(index == '2'){
+				$('.section2').find('.left').css({display:'none'});
+				$('.section2').find('.right').css({display:'none'});
+				$('.section2').find('.left').animate({
+					left: '230px'
+				},0, 'easeOutExpo');
+				$('.section2').find('.right').animate({
+					right: '230px'
+				},0, 'easeOutExpo');
+			}
+			if(index == '3'){
+				$('.section3').find('.left').css({display:'none'});
+				$('.section3').find('.right').css({display:'none'});
+				$('.section3').find('.left').animate({
+					left: '230px'
+				},0, 'easeOutExpo');
+				$('.section3').find('.right').animate({
+					right: '230px'
+				},0, 'easeOutExpo');
+			}
+			if(index == '4'){
+				$('.section4').find('.left').css({display:'none'});
+				$('.section4').find('.right').css({display:'none'});
+				$('.section4').find('.left').animate({
+					left: '230px'
+				},0, 'easeOutExpo');
+				$('.section4').find('.right').animate({
+					right: '230px'
+				},0, 'easeOutExpo');
+			}
+
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="nav-box">
+	<div class="logo"></div>
+	<div class="suoyin">
+		<a href="#">首页</a>
+		<a href="#">产品介绍</a>
+		<a href="#">用户板</a>
+	</div>
+	<div class="fujia">
+		<a href="#"><span><img src="images/hot.jpg" alt=""></span>手机客户端</a>
+		<a href="#">百度司南</a>
+		<a href="#">联系我们</a>
+		<a href="#">申请试用</a>
+	</div>
+</div>
+<div id="dowebok">
+	<div class="section first">
+	    <div class="load">
+	    	<div class="denlu">
+	    	     <span><img src="images/user.jpg" alt=""></span>
+	    		<input type="text" placeholder="用户名">
+	    	</div>
+	    	<div class="mima">
+	    	    <span><img src="images/pass.jpg" alt=""></span>
+	    		<input type="password" placeholder="密码">
+	    	</div>
+	    	<div class="yanzheng">
+	    		<input type="text" placeholder="验证码">
+	    		<span><img src="images/yanzheng.jpg" alt=""></span>
+	    		<span class="next"><a href="#">换一张</a></span>
+	    	</div>
+	    	<div class="button">登录</div>
+	    </div>
+	    <div class="cloud"><img src="images/cloud_1_1d4924b.png" alt=""></div>  
+	    <div class="cloud"><img src="images/cloud_2_a186193.png" alt=""></div>
+	    <div class="cloud"><img src="images/cloud_3_5ee0340.png" alt=""></div>
+	    <div class="airflan"><img src="images/flight_ade8ee2.png" alt=""></div>
+	    <div class="wenzi"><img src="images/launch_deea86c.png" alt=""></div>
+	    <div class="ship"><img src="images/ship_1ad6734.png" alt=""></div>
+	    <div class="hill-left"><img src="images/hill_1_0d79217.png" alt=""></div>
+	    <div class="hill-right"><img src="images/hill_3_ace39fb.png" alt=""></div>
+	    <div class="hill-middle"><img src="images/hill_2_540422f.png" alt=""></div>
+	    <div class="button1" id='next' style="cursor:pointer;"><img src="images/arrow_aad9b25.png" alt=""></div>
+		<div class="bottom"></div>
+	</div>
+	<div class="section section2 second">
+		<div class="left"><img src="images/h_lingxian_221f2d8.png" class="img" alt=""><div class="tit"><h4>数据收集与处理</h4><h5>15年专业数据收集与语义分析技术积累<br>卓越极致，不断攀登</h5></div></div>
+		<div class="right"><img src="images/brain_36a156f.png
+" alt=""></div>
+		<div class="zhu1"></div>
+		<div class="zhu2"></div>
+		<div class="zhu3"></div>
+		<div class="zhu4"></div>
+		<div class="zhu5"></div>
+		<div class="button1" id="next"><img src="images/arrow_aad9b25.png" alt=""></div>
+	</div>
+	<div class="section section3 third">
+		<div class="left"><img src="images/h_quanmian_8f813d2.png" class="img" alt=""><div class="tit"><h4>舆情分析逻辑与架构</h4><h5>声量诊断、传播分析、情感提炼、受众画像<br>有方法论，更有智慧</h5></div></div>
+		<div class="right"><img src="images/allside_e8abd12.png" alt=""></div>
+		<div class="bottom"><img src="images/bg-3-head_b8a3f7f.png" alt=""></div>
+		<div class="button1" id="next"><img src="images/arrow_aad9b25.png" alt=""></div>
+	</div>
+	<div class="section section4 four">
+		<div class="left"><img src="images/h_zhuanye_256a94d.png" class="img" alt=""><div class="tit"><h4>数据收集与处理</h4><h5>15年专业数据收集与语义分析技术积累<br>卓越极致，不断攀登</h5></div></div>
+		<div class="beijing"><img src="images/bubble_3b0f897.png" alt=""></div>
+		<div class="right"><img src="images/stat_8934528.png" alt=""></div>
+	</div>
+</div>
